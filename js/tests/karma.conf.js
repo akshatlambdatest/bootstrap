@@ -62,13 +62,14 @@ const config = {
   singleRun: true,
   captureTimeout: 180_000,
   browserDisconnectTolerance: 3,
-  browserDisconnectTimeout: 180_000,
+  browserDisconnectTimeout: 10000,
   browserNoActivityTimeout: 180_000,
+  retryLimit: 4,
   concurrency: Number.POSITIVE_INFINITY,
   client: {
     clearContext: false,
     jasmine: {
-      timeoutInterval: 20_000,
+      timeoutInterval: 200_000,
     },
   },
   files: [

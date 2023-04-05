@@ -53,11 +53,11 @@ const browsers = {
         platformName: "Windows 10",
       },
     },
-    galaxyS22: {
+    pixel6: {
       platformName: "android",
       platformVersion: "12",
       browserName: "Chrome",
-      deviceName: "Galaxy S22 5G",
+      deviceName: "Pixel 6",
       isRealMobile: true,
     },
     iphone11: {
