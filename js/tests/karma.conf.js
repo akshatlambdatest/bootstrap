@@ -218,6 +218,6 @@ config.plugins = plugins
 config.reporters = reporters
 
 module.exports = karmaConfig => {
-  config.logLevel = karmaConfig.LOG_DEBUG
+  config.logLevel = karmaConfig.LOG_ERROR
   karmaConfig.set(config)
 }
