@@ -120,6 +120,7 @@ const config = {
 
 if (LAMBDATEST) {
   config.hostname = 'localhost.lambdatest.com'
+  config.captureTimeout = 600_1000
 
   for (const key of Object.keys(browsers.lambdaTest)) {
     browsers.lambdaTest[key].base = 'WebDriver'
@@ -217,6 +218,6 @@ config.plugins = plugins
 config.reporters = reporters
 
 module.exports = karmaConfig => {
-  config.logLevel = karmaConfig.LOG_ERROR
+  config.logLevel = karmaConfig.LOG_DEBUG
   karmaConfig.set(config)
 }

@@ -129,8 +129,9 @@ const browsers = {
       platformName: 'ios',
       platformVersion: '15',
       browserName: 'Safari',
-      deviceName: 'iPhone.*',
-      isRealMobile: true
+      deviceName: 'iPhone 13',
+      isRealMobile: true,
+      fixedIP: "00008110-000E09161E38801E",
     },
     ios16: {
       platformName: 'ios',
