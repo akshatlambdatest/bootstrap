@@ -154,12 +154,16 @@ if (LAMBDATEST) {
   reporters.push('kjhtml')
 } else if (BROWSERSTACK) {
   config.hostname = ip.address()
+  config.concurrency = 1
   config.browserStack = {
     username: ENV.BROWSER_STACK_USERNAME,
     accessKey: ENV.BROWSER_STACK_ACCESS_KEY,
     build: `bootstrap-${ENV.GITHUB_SHA ? `${ENV.GITHUB_SHA.slice(0, 7)}-` : ''}${new Date().toISOString()}`,
     project: 'Bootstrap',
-    retryLimit: 3
+    retryLimit: 3,
+    'browserstack.networkLogs': true,
+    'networkLogs': true
+
   }
   plugins.push('karma-browserstack-launcher', 'karma-jasmine-html-reporter')
   config.customLaunchers = browsers.browserStack
